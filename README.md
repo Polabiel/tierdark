@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🏆 TierDark
 
-## Getting Started
+Bem-vindo ao **TierDark**! Um aplicativo de votação online onde qualquer pessoa pode classificar itens em uma TierDark de S (melhor) a F (pior)! 🎉
 
-First, run the development server:
+## 📋 Visão Geral
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Este projeto permite que os usuários votem em uma TierDark de forma fácil e interativa. As votações ficam abertas por 3 dias e são arquivadas para consulta posterior. 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Funcionalidades
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- 🌐 **Acesso Online:** Qualquer pessoa com o link pode acessar a votação.
+- 📝 **Entrada de Nome:** Todos os participantes devem inserir seus nomes antes de votar.
+- 🗳️ **Classificação Completa:** Os participantes devem classificar todas as opções antes de enviar seus votos.
+- ⏳ **Duração da Votação:** As votações ficam abertas por 3 dias.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 🚀 Começando
 
-## Learn More
+Siga estas etapas para configurar e executar o projeto localmente.
 
-To learn more about Next.js, take a look at the following resources:
+### Pré-requisitos
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Node.js
+- MongoDB
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Instalação
 
-## Deploy on Vercel
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/polabiel/TierDark.git
+   cd TierDark
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+3. Configure a variável de ambiente no arquivo `.env.local`:
+   ```bash
+   DATABASE_URL=sua_url_do_prisma
+
+4. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
+
+### 📄 Descrição dos Arquivos
+
+- **pages/index.js:** Página inicial do aplicativo com o formulário de votação.
+- **pages/api/vote.js:** API para registrar os votos no banco de dados.
+- **pages/api/results.js:** API para recuperar os resultados das votações.
+- **components/VotingForm.js:** Componente do formulário de votação.
+
+## 🤝 Contribuindo
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests. 💡
